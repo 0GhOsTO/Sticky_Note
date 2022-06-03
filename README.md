@@ -9,37 +9,23 @@
 
 ## Overview
 ### Description: 
+Allow users to make a note and put on the screen of the phone as a widget. 
 
 
 ### App Evaluation
-- **Category:** 
-- **Mobile:** 
-- **Story:** 
-- **Market:** 
-- **Habit:** 
-- **Scope:** 
-## Product Spec
-### 1. User Stories (Required and Optional)
+- **Category:** Lifestyle
+- **Mobile:** Developed for mobile by taking advantage of quick and simple and readable.
+- **Story:** Users type the brief or important notes and save on their phone. 
+- **Market:** All age groups are targeted. People who need to make a quick notes on the phone.
+- **Scope:** Application could explanded to contain more features based on the feedback from the user.
 
-**Required Must-have Stories**
-- Create:   
-- Read: 
-- Update: 
-- Delete:
-
-**Optional Nice-to-have Stories**
-- 
-- 
-
-# Underneath is an Example(Need to Be Edited)
 
 ### 2. Screen Archetypes
-1. Login
-2. Register
-3. Home (Tab Layout)
-4. Edit/Compose (Fragment)
-5. Chat/Friend (Fragment)
-6. ...
+1. Login(Google Account)
+2. Register(Google Account)
+3. Home(Tab Layout / 2 Recycler View)
+4. Edit/Compose/Save (Fragment)
+5. Widget
 
 ### 3. Navigation
 
@@ -54,19 +40,16 @@
 - Login/Register
 - Home with Professional/Social Event
 - Profile
-- Compose Event 
-- Setting
-- Report
+- Make Note 
 - Feedback
-- ...
+- Widget
 
 ## Wireframes
 ### Design (Figma)
 https://www.figma.com/file/Op5T6MotwUd4ZTqTv5OCoz/Kotlin-Project?node-id=0%3A1
 <img src='https://github.com/Codepath-Android-pod1/Final_Project/blob/master/WireFrame3.png' />
-## PowerPoint Walkthrough
-https://docs.google.com/presentation/d/1da7IXtV4kkPxpi9mSwFok32b2ZYULYGRZ6Ag0Tb0H2A/edit?usp=sharing
-## Video Walkthrough
+
+## Video Walkthrough 
 Briefly shows the current progress of the project.
 
 <img src='https://github.com/Codepath-Android-pod1/Final_Project/blob/master/CP-3.gif' />
@@ -74,60 +57,30 @@ Briefly shows the current progress of the project.
 
 ## Schema 
 ### Models
-#### Event
-
+#### Notes
 | Property(Key) | Type          | Description  |
 | ------------- |-------------  | ------------ |
 | objectId      | String        | Unique id for the event |
-| user          | String        | Event organizer |
-| title     | String            | Name of the event|
-| description   | String        | Description of the event|
-| location      | GeoPoint      | Latitude and longitude values of the event|
-| locationName      | String    | Google Maps name of event location|
-| date          | Date          | Date and start time of the event|
+| title         | String        | Title of the Note |
+| details       | String        | Detail of the Note |
+| favorite      | boolean       | Marked as important note or not|
+| deleted       | boolean       | Deleted note or not|
+| calendar      | Date          | Mark the due date of the note and alarm|
 
-#### User
+#### User / Requirement for Google Account
 | Property(Key) | Type          | Description  |
 | ------------- |-------------  | ------------ |
-| objectId      | String        | Unique id for the user |
-| username      | String        | username from registering |
-| email         | String        | email of the user|
-| name          | String        | set by user after registering |
-| phonenum      | String        | phone number of the user|
+| objectId      | String        | |
+| username      | String        | |
+| email         | String        | |
+| name          | String        | |
+| phonenum      | String        | |
 
 ### Networking
 #### List of network requests by screen
  - Home Feed Screen
-    - (Read/GET) Query events based on filters
- - Organizer List Feed Screen
-    - (Read/GET) Query list of Organizers
- - Chat Feed Screen
-    - (Read/GET) Query logged in user Chat objects
-    - (Create/POST) Send message
- - Create Event Feed Screen  
-    - (Create/POST) Create a new event object
- - Create Profile
-    - (Create/POST) Create a new user(objectId) with detail included
- - Display Profile
-    - (Read/GET) Query details of the user(objectId) and display and profile
- - Remove Profile
-    - (Delete) Delete the user(objectId) with detail permanently
-
-#### Existing API Endpoints
-##### Ticketmaster Discovery API
-- Base URL - [https://app.ticketmaster.com/discovery/v2/](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
-
- HTTP Verb | Endpoint | Description
- ----------|----------|------------
-  `GET`    | /events.json?apikey={apikey}&{params} | gets all events (relevant parameters include `keyword`, `geoPoint`, `postalCode`, `radius`, `unit`, etc)
-  
-#### Dependencies
-- Material Design
-- Glide
-- Parse
-- Retrofit
-- GeoFire
-- Google Play Location
-- EasyPermissions
+    - (Read/GET/DELETE) Get the account's note and display on the recycler view.
+ - Garbage Note Feed Screen
+    - (Read/POST/DELETE) Create a new event object
  
 ## Developer Comments
