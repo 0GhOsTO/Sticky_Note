@@ -47,12 +47,12 @@ Allow users to make a note and put on the screen of the phone as a widget.
 ## Wireframes
 ### Design (Figma)
 https://www.figma.com/file/Op5T6MotwUd4ZTqTv5OCoz/Kotlin-Project?node-id=0%3A1
-<img src='https://github.com/Codepath-Android-pod1/Final_Project/blob/master/WireFrame3.png' />
+<img src='https://github.com/0GhOsTO/Sticky_Note/blob/master/Basic%20Structure.png' />
 
 ## Video Walkthrough 
 Briefly shows the current progress of the project.
 
-<img src='https://github.com/Codepath-Android-pod1/Final_Project/blob/master/CP-3.gif' />
+<img src='' />
 
 
 ## Schema 
